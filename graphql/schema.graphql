@@ -1,4 +1,5 @@
-type pensivej{
+type Person{
+    id: String!,
     name: String!,
     age: Int!,
     gender: String!
@@ -6,5 +7,6 @@ type pensivej{
 
 
 type Query{
-    person: pensivej!
+    people: [Person]!
+    person(id: Int!): Person
 }
