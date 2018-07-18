@@ -27,14 +27,14 @@ export let movies = [
 ]
 
 export const getByID = id => {
-    const filteredPeople = people.filter(person => String(id) === person.id);
+    const filteredPeople = people.filter(person => id === person.id);
     return filteredPeople[0]
 }
 
 export const getMovies = () => movies;
 
 export const deleteMovie = (id) => {
-    const cleanedMovies = movies.filter(movie => movie.id !== String(id));
+    const cleanedMovies = movies.filter(movie => movie.id !== id);
     if (movies.length > cleanedMovies.length) {
         movies = cleanedMovies;
         return true;
